@@ -71,7 +71,9 @@ The provided C++ program aims to identify and display the longest and second-lon
 7. For each word in sorted list:
 
    - Description: Iterates over each word in the sorted list.
-   - Steps:
+
+# Design Decisions:
+
      - Check if word is compounded:
        - Description: Checks if the word is a compounded word.
        - Steps:
