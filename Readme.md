@@ -51,22 +51,18 @@ The provided C++ program aims to identify and display the longest and second-lon
 3. _Input/Output Optimization_:
    The program optimizes input/output performance by utilizing ios_base::sync_with_stdio(false) and cin.tie(NULL).
 
-# Code flow diagram:
+# Code Flow Diagram
 
-Start
+1. Start
 
 │
-▼
-Read Input from File
+▼ 2. Read Input from File
 │
-▼
-Sort Words by Length
+▼ 3. Sort Words by Length
 │
-▼
-Initialize Trie Data Structure
+▼ 4. Initialize Trie Data Structure
 │
-▼
-For each word in sorted list:
+▼ 5. For each word in sorted list:
 │
 ├─── Check if word is compounded:
 │ │
@@ -87,12 +83,12 @@ For each word in sorted list:
 │
 └─── Update Trie with current word
 
-Sort Compounded Words by Length
-│
-▼
-Print Longest and Second Longest Compounded Words
-│
-▼
-Print Time Taken by Code
+6. Sort Compounded Words by Length
+   │
+   ▼
+7. Print Longest and Second Longest Compounded Words
+   │
+   ▼
+8. Print Time Taken by Code
 
-End
+9. End
