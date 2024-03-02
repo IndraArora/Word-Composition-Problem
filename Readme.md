@@ -50,57 +50,49 @@ The provided C++ program aims to identify and display the longest and second-lon
 
 3. _Input/Output Optimization_:
    The program optimizes input/output performance by utilizing ios_base::sync_with_stdio(false) and cin.tie(NULL).
-   Flow Diagram:
 
-4. Read Input from File:
+# Code flow diagram:
 
-   - Description: Reads words from a file.
-   - Input: File path
-   - Output: List of words
+Start
 
-5. Sort Words by Length:
+│
+▼
+Read Input from File
+│
+▼
+Sort Words by Length
+│
+▼
+Initialize Trie Data Structure
+│
+▼
+For each word in sorted list:
+│
+├─── Check if word is compounded:
+│ │
+│ ▼
+│ Iterate over word characters
+│ │
+│ ├─── Check if current prefix is in Trie:
+│ │ │
+│ │ ├─── If yes, check if remaining part is in Trie:
+│ │ │ │
+│ │ │ ├─── If yes, mark as compounded
+│ │ │ │
+│ │ │ └─── If no, continue
+│ │ │
+│ │ └─── If no, continue
+│ │
+│ └─── Update Trie with current word
+│
+└─── Update Trie with current word
 
-   - Description: Sorts the list of words by their length in descending order.
-   - Input: List of words
-   - Output: Sorted list of words
+Sort Compounded Words by Length
+│
+▼
+Print Longest and Second Longest Compounded Words
+│
+▼
+Print Time Taken by Code
 
-6. Initialize Trie Data Structure:
-
-   - Description: Initializes an empty Trie data structure.
-
-7. For each word in sorted list:
-
-   - Description: Iterates over each word in the sorted list.
-
-# Design Decisions:
-
-     - Check if word is compounded:
-       - Description: Checks if the word is a compounded word.
-       - Steps:
-         - Iterate over word characters:
-           - Description: Iterates over each character of the word.
-           - Steps:
-             - Check if current prefix is in Trie:
-               - Description: Checks if the current prefix exists in the Trie.
-               - Steps:
-                 - If yes, check if remaining part is in Trie:
-                   - Description: Checks if the remaining part of the word exists in the Trie.
-                   - Steps:
-                     - If yes, mark as compounded
-                     - If no, continue
-                 - If no, continue
-     - Update Trie with current word:
-       - Description: Inserts the current word into the Trie.
-
-8. Sort Compounded Words by Length:
-
-   - Description: Sorts the list of compounded words by their length in descending order.
-
-9. Print Longest and Second Longest Compounded Words:
-
-   - Description: Prints the longest and second longest compounded words, if found.
-   - Input: List of compounded words
-   - Output: Longest and second longest compounded words, if found.
-
-10. Print Time Taken by Code:
-    - Description: Prints the time taken by the code to execute.
+End
